@@ -21,32 +21,30 @@ function displayPlayer(players){
         </li>
         `;
         displaySelectedPlayer.appendChild(ul);
+        // console.log(ul.childNodes)
     }
 }
 
 function addToSelect(clickBtn){
     const playerName = clickBtn.parentElement.parentElement.children[1].children[0].innerText;
-    // ! validation
-    if(clickBtn.disabled = true){
-        clickBtn.parentElement.parentElement.children[1].children[2].style.backgroundColor = 'gray';
-    }
     const playerObject = {
         playerName: playerName
     }
-    playerArray.push(playerObject);
-
-    if(playerArray.length > 5){
-        alert('Please Select Only Five Players');
-        return;
+    if(playerArray.length < 5){
+        playerArray.push(playerObject);
+        // ! validation
+        if(clickBtn.disabled = true){
+            clickBtn.parentElement.parentElement.children[1].children[2].style.backgroundColor = 'gray';
+        }
+    }
+    else{
+        alert("You've Already Choose Five Players");
     }
     displayPlayer(playerArray);
 }
 
 // ? calculation per player
 document.getElementById('calculate-btn').addEventListener('click', function(){
-    // if(playerArray.length > 5){
-    //     alert('Please Select Only Five Players')
-    // }
     const selectedPlayer = playerArray.length;
     const perPlayerBudget = getInputById('player-budget');
     // ! validation
@@ -78,7 +76,10 @@ document.getElementById('total-calculate-btn').addEventListener('click', functio
         alert('Please Enter Valid Number');
         return;
     }
-    
+    else if(playerExpenses < 0){
+        alert('You Have to Calculate Player Expenses First.');
+        return
+    }
     const finalTotal = playerExpenses + managerExpenses + coachExpenses;
     const totalExpense = document.getElementById('total-expense');
 
