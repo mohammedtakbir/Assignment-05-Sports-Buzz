@@ -8,6 +8,7 @@ function displayPlayer(players){
         count++;
         // ! validation 1
         if(count > 5){
+            // alert('you have already selected five players')
             return;
         }
         const name = player.playerName;
@@ -25,31 +26,39 @@ function displayPlayer(players){
 
 function addToSelect(clickBtn){
     const playerName = clickBtn.parentElement.parentElement.children[1].children[0].innerText;
-
+    // ! validation
+    if(clickBtn.disabled = true){
+        clickBtn.parentElement.parentElement.children[1].children[2].style.backgroundColor = 'gray';
+    }
     const playerObject = {
         playerName: playerName
     }
     playerArray.push(playerObject);
 
+    if(playerArray.length > 5){
+        alert('Please Select Only Five Players');
+        return;
+    }
     displayPlayer(playerArray);
-}
-function getTextElementById(elementId){
-    const depositElement = document.getElementById(elementId);
-    const depositElementSring = depositElement.innerText;
-    const previousDepositAmount = parseFloat(depositElementSring);
-    return previousDepositAmount;
 }
 
 // ? calculation per player
 document.getElementById('calculate-btn').addEventListener('click', function(){
+    // if(playerArray.length > 5){
+    //     alert('Please Select Only Five Players')
+    // }
     const selectedPlayer = playerArray.length;
     const perPlayerBudget = getInputById('player-budget');
+    // ! validation
+    if(isNaN(perPlayerBudget)){
+        alert('Please Enter Number');
+        return;
+    }
+    else if(perPlayerBudget < 0){
+        alert('Please Enter Valid Number');
+        return;
+    }
     const totalPlayerExpense = selectedPlayer * perPlayerBudget;
-
-    // ! alternative
-    /* const previousExpense = getTextElementById('player-expense');
-    const totalExpenses = previousExpense + expense;
-    setTextElementById('player-expense', totalExpenses); */
 
     const previousExpense = document.getElementById('player-expense');
     previousExpense.innerText = totalPlayerExpense;
@@ -60,6 +69,15 @@ document.getElementById('total-calculate-btn').addEventListener('click', functio
     const playerExpenses = getTextElementById('player-expense');
     const managerExpenses = getInputById('manager-expense');
     const coachExpenses = getInputById('coach-expense');
+    // ! validation
+    if((isNaN(managerExpenses)) || (isNaN(coachExpenses))){
+        alert('Please Enter Number');
+        return;
+    }
+    else if((managerExpenses < 0) || (coachExpenses < 0)){
+        alert('Please Enter Valid Number');
+        return;
+    }
     
     const finalTotal = playerExpenses + managerExpenses + coachExpenses;
     const totalExpense = document.getElementById('total-expense');
