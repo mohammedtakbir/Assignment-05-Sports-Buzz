@@ -40,10 +40,11 @@ function getTextElementById(elementId){
     return previousDepositAmount;
 }
 
+// ? calculation per player
 document.getElementById('calculate-btn').addEventListener('click', function(){
     const selectedPlayer = playerArray.length;
     const perPlayerBudget = getInputById('player-budget');
-    const totalExpense = selectedPlayer * perPlayerBudget;
+    const totalPlayerExpense = selectedPlayer * perPlayerBudget;
 
     // ! alternative
     /* const previousExpense = getTextElementById('player-expense');
@@ -51,6 +52,18 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     setTextElementById('player-expense', totalExpenses); */
 
     const previousExpense = document.getElementById('player-expense');
-    previousExpense.innerText = totalExpense;
+    previousExpense.innerText = totalPlayerExpense;
+})
+
+// ? total calculation
+document.getElementById('total-calculate-btn').addEventListener('click', function(){
+    const playerExpenses = getTextElementById('player-expense');
+    const managerExpenses = getInputById('manager-expense');
+    const coachExpenses = getInputById('coach-expense');
+    
+    const finalTotal = playerExpenses + managerExpenses + coachExpenses;
+    const totalExpense = document.getElementById('total-expense');
+
+    totalExpense.innerText = finalTotal;
 })
 

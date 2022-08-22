@@ -126,25 +126,29 @@
                             <button id="calculate-btn" class="bg-teal-700 text-white py-2 text-xl w-full active-btn">Calculate</button>
                         </div>
                         <div>
+                            <!-- ? Player Expenses -->
                             <div class="mt-10 flex items-center mb-10">
                                 <label for="" class="mr-9 text-xl text-gray-400">Player Expenses</label>
                                 <p class="text-2xl"> $
                                     <span id="player-expense">00</span>
                                 </p>
                             </div>
+                            <!-- ? Manager -->
                             <div class="mt-10 flex items-center mb-10">
                                 <label for="" class="mr-9 text-xl text-gray-400">Manager</label>
-                                <input type="text" name="" id="" class="bg-black border border-white p-2 text-xl w-40">
+                                <input type="text" name="" id="manager-expense" class="bg-black border border-white p-2 text-xl w-40">
                             </div>
+                            <!-- ? Coach -->
                             <div class="mt-10 flex items-center mb-10">
                                 <label for="" class="mr-14 text-xl text-gray-400">Coach</label>
-                                <input type="text" name="" id="" class="bg-black border border-white p-2 text-xl w-40">
+                                <input type="text" name="" id="coach-expense" class="bg-black border border-white p-2 text-xl w-40">
                             </div>
-                            <button class="bg-teal-700 text-white py-2 text-xl w-full active-btn">Calculate Total</button>
+                            <!-- ? Total Calculation -->
+                            <button id="total-calculate-btn" class="bg-teal-700 text-white py-2 text-xl w-full active-btn">Calculate Total</button>
                             <div class="mt-10 flex items-center justify-between mb-10">
                                 <label for="" class="mr-9 text-xl text-gray-400">Total</label>
                                 <p class="text-2xl text-orange-600"> $
-                                    <span>00</span>
+                                    <span id="total-expense">00</span>
                                 </p>
                             </div>
                         </div>
