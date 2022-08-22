@@ -33,3 +33,24 @@ function addToSelect(clickBtn){
 
     displayPlayer(playerArray);
 }
+function getTextElementById(elementId){
+    const depositElement = document.getElementById(elementId);
+    const depositElementSring = depositElement.innerText;
+    const previousDepositAmount = parseFloat(depositElementSring);
+    return previousDepositAmount;
+}
+
+document.getElementById('calculate-btn').addEventListener('click', function(){
+    const selectedPlayer = playerArray.length;
+    const perPlayerBudget = getInputById('player-budget');
+    const totalExpense = selectedPlayer * perPlayerBudget;
+
+    // ! alternative
+    /* const previousExpense = getTextElementById('player-expense');
+    const totalExpenses = previousExpense + expense;
+    setTextElementById('player-expense', totalExpenses); */
+
+    const previousExpense = document.getElementById('player-expense');
+    previousExpense.innerText = totalExpense;
+})
+
