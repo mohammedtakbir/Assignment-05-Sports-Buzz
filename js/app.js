@@ -69,7 +69,7 @@ document.getElementById('total-calculate-btn').addEventListener('click', functio
         return;
     }
     else if(playerExpenses === 0){
-        alert('You Have to Calculate Player Expenses First');
+        alert('You have to calculate player expenses first');
         return;
     }
     const finalTotal = playerExpenses + managerExpenses + coachExpenses;
