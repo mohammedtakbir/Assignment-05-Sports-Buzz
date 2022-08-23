@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selected V</title>
-    <!-- ? Tailwind -->
+    <title>Sports Buzz</title>
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
     <header class="bg-black">
-        <section class="container mx-auto py-40">
-            <h1 class="text-7xl font-bold text-center text-white mb-8">The Greatest show on the earth</h1>
-            <p class="text-center text-white max-w-2xl mx-auto font-medium text-xl">Football is like life: It requires perseverance, self denial, hard work , sacrifice, dedication, and respect for authority.</p>
+        <section class="container mx-auto py-32">
+            <h1 class="text-7xl text-center text-white mb-10 text-orange-600 font-bold">𝒮𝑒𝓁𝑒𝒸𝓉 𝒴𝑜𝓊𝓇 𝒫𝓁𝒶𝓎𝑒𝓇𝓈</h1>
+            <h1 class="text-2xl font-normal text-center text-white font-semibold mb-3">Paris Saint-Germain F.C.</h1>
+            <p class="text-center text-white max-w-2xl mx-auto font-medium text-lg max-w-5xl">Paris Saint-Germain Football Club, commonly referred to as Paris Saint-Germain, Paris, Paris SG or simply PSG is a professional football club based in Paris, France. They compete in Ligue 1, the top division of French football.</p>
         </section>
     </header>
     <main class="main-bg-color py-16">
-        <section class="container mx-auto">
-            <div class="grid grid-cols-4" id="main">
-                <div class="text-center p-4">
+        <section class="container mx-auto p-12">
+            <div class="grid grid-cols-4">
+                <div class="text-center p-5">
                     <div class="border border-gray-600">
                         <img src="images/messi.png" class="w-full" alt="">
                         <div class="bg-black py-7">
@@ -30,11 +29,11 @@
                                 <span class="text-md mr-3">36 goals </span> |
                                 <span class="text-md ml-3">120 Assist</span>
                             </div>
-                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 px-16 text-xl active-btn">SELECT</button>
+                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 w-3/5 text-xl active-btn">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="text-center p-4">
+                <div class="text-center p-5">
                     <div class="border border-gray-600">
                         <img src="images/neymar.png" class="w-full" alt="">
                         <div class="bg-black py-7">
@@ -43,11 +42,11 @@
                                 <span class="text-md mr-3">26 goals </span> |
                                 <span class="text-md ml-3">90 Assist</span>
                             </div>
-                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 px-16 text-xl active-btn">SELECT</button>
+                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 w-3/5 text-xl active-btn">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="text-center p-4">
+                <div class="text-center p-5">
                     <div class="border border-gray-600">
                         <img src="images/mbappe.png" class="w-full" alt="">
                         <div class="bg-black py-7">
@@ -56,26 +55,21 @@
                                 <span class="text-md mr-3">12 goals </span> |
                                 <span class="text-md ml-3">65 Assist</span>
                             </div>
-                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 px-16 text-xl active-btn">SELECT</button>
+                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 w-3/5 text-xl active-btn">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <!-- ? Selected player start -->
-                <div class="p-4">
+                <!-- ? Select player start -->
+                <div class="p-5">
                     <div class="bg-black py-9 px-10 h-full">
-                        <h2 class="text-white text-4xl font-semibold text-center">Selected-V</h2>
+                        <h2 class="text-white text-3xl font-semibold text-center">Selected-V</h2>
                         <div id="selected-player" class="mt-12">
-                            <!-- <ul class="mb-6">
-                                <li>
-                                    <span class="text-gray-400 mr-5 font-bold text-2xl">1.</span>
-                                    <span class="text-white font-normal text-xl">Vítor Machado</span>
-                                </li>
-                            </ul> -->
+                            
                         </div>
                     </div>
                 </div>
-                <!-- ? Selected player end -->
-                <div class="text-center p-4">
+                <!-- ? Select player end -->
+                <div class="text-center p-5">
                     <div class="border border-gray-600">
                         <img src="images/vitor.png" class="w-full" alt="">
                         <div class="bg-black py-7">
@@ -84,11 +78,11 @@
                                 <span class="text-md mr-3">22 goals </span> |
                                 <span class="text-md ml-3">70 Assist</span>
                             </div>
-                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 px-16 text-xl active-btn">SELECT</button>
+                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 w-3/5 text-xl active-btn">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="text-center p-4">
+                <div class="text-center p-5">
                     <div class="border border-gray-600">
                         <img src="images/ramos.png" class="w-full" alt="">
                         <div class="bg-black py-7">
@@ -97,11 +91,11 @@
                                 <span class="text-md mr-3">20 goals </span> |
                                 <span class="text-md ml-3">95 Assist</span>
                             </div>
-                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 px-16 text-xl active-btn">SELECT</button>
+                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 w-3/5 text-xl active-btn">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <div class="text-center p-4">
+                <div class="text-center p-5">
                     <div class="border border-gray-600">
                         <img src="images/renato.png" class="w-full" alt="">
                         <div class="bg-black py-7">
@@ -110,43 +104,44 @@
                                 <span class="text-md mr-3">15 goals </span> |
                                 <span class="text-md ml-3">90 Assist</span>
                             </div>
-                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 px-16 text-xl active-btn">SELECT</button>
+                            <button onclick="addToSelect(this)" class="bg-teal-700 text-white py-2 w-3/5 text-xl active-btn">SELECT</button>
                         </div>
                     </div>
                 </div>
-                <!-- ? calculation area -->
-                <div class="p-4 text-white">
+                <!-- ? calculation area Start-->
+                <div class="p-5 text-white">
                     <div class="bg-black py-7 px-6 h-full">
-                        <h2 class="text-white text-4xl font-semibold text-center">Budget</h2>
+                        <h2 class="text-white text-3xl font-semibold text-center">Budget</h2>
+                        <!-- ? Per Player -->
                         <div>
-                            <div class="mt-10 flex items-center mb-10">
-                                <label for="" class="mr-7 text-xl text-gray-400">Per Player</label>
-                                <input id="player-budget" type="text" name="player-input" class="bg-black border border-white p-2 text-xl w-40">
+                            <div class="mt-10 flex items-center mb-10 justify-between">
+                                <label for="" class="text-xl text-gray-400">Per Player</label>
+                                <input id="player-budget" type="text" name="player-input" class="bg-black border border-white p-1 text-xl w-1/2">
                             </div>
                             <button id="calculate-btn" class="bg-teal-700 text-white py-2 text-xl w-full active-btn">Calculate</button>
                         </div>
                         <div>
                             <!-- ? Player Expenses -->
-                            <div class="mt-10 flex items-center mb-10">
+                            <div class="mt-10 flex items-center mb-10 justify-between">
                                 <label for="" class="mr-9 text-xl text-gray-400">Player Expenses</label>
                                 <p class="text-2xl"> $
                                     <span id="player-expense">00</span>
                                 </p>
                             </div>
                             <!-- ? Manager -->
-                            <div class="mt-10 flex items-center mb-10">
-                                <label for="" class="mr-9 text-xl text-gray-400">Manager</label>
-                                <input type="text" name="" id="manager-expense" class="bg-black border border-white p-2 text-xl w-40">
+                            <div class="mt-10 flex items-center mb-10 justify-between">
+                                <label for="" class="text-xl text-gray-400">Manager</label>
+                                <input type="text" name="" id="manager-expense" class="bg-black border border-white p-1 text-xl w-1/2">
                             </div>
                             <!-- ? Coach -->
-                            <div class="mt-10 flex items-center mb-10">
-                                <label for="" class="mr-14 text-xl text-gray-400">Coach</label>
-                                <input type="text" name="" id="coach-expense" class="bg-black border border-white p-2 text-xl w-40">
+                            <div class="mt-10 flex items-center mb-10 justify-between">
+                                <label for="" class="text-xl text-gray-400">Coach</label>
+                                <input type="text" name="" id="coach-expense" class="bg-black border border-white p-1 text-xl w-1/2">
                             </div>
                             <!-- ? Total Calculation -->
                             <button id="total-calculate-btn" class="bg-teal-700 text-white py-2 text-xl w-full active-btn">Calculate Total</button>
-                            <div class="mt-10 flex items-center justify-between mb-10">
-                                <label for="" class="mr-9 text-xl text-gray-400">Total</label>
+                            <div class="mt-10 pb-3 flex items-center justify-between">
+                                <label for="" class="text-xl text-gray-400">Total</label>
                                 <p class="text-2xl text-orange-600"> $
                                     <span id="total-expense">00</span>
                                 </p>
@@ -154,6 +149,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- ? calculation area End-->
             </div>
         </section>
     </main>
@@ -161,13 +157,6 @@
     <footer class="main-bg-color py-16">
         <p class="text-gray-400 text-center text-xl">Copyright @ 2022 All Rights Reserved.</p>
     </footer>
-    
-
-
-
-
-
-
 
     <script src="js/utilities.js"></script>
     <script src="js/app.js"></script>
